@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
-import useProcessando from "./useProcessando"
+import useProcessando from "./estadoProcessamento"
 
 export default function useStarwars(){
     const {processando, iniciarProcessamento, finalizarProcessamento} = useProcessando()
@@ -23,6 +23,10 @@ export default function useStarwars(){
       
     },[iniciarProcessamento, finalizarProcessamento])
 
+    useEffect(() =>{
+        obterFilmes(personagem)
+    },[personagem, obterFilmes])
+
     const obterPersonagens = useCallback(async function (){
         try{
             iniciarProcessamento()
@@ -37,19 +41,16 @@ export default function useStarwars(){
     function selecionarPersonagem(personagem: any){
         setPersonagem(personagem)
        }
-
-    function voltar(){
-        setPersonagem(null)
-        setFilmes([])
-    }
-
-    useEffect(() => {
-        obterPersonagens()
-    }, [obterPersonagens])
-
-    useEffect(() =>{
-        obterFilmes(personagem)
-    },[personagem, obterFilmes])
+       
+       useEffect(() => {
+           obterPersonagens()
+        }, [obterPersonagens])
+        
+        function voltar(){
+            setPersonagem(null)
+            setFilmes([])
+        }
+    
 
     return{
         personagens,

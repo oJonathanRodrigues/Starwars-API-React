@@ -7,7 +7,7 @@ interface PersonagensProps{
 
 export default function Personagens(props: PersonagensProps){
     return(
-       <table className="w-3/5 text-xl opacity-70 rounded-lg overflow-hidden">
+       <table className="w-3/5 text-xl rounded-lg overflow-hidden ">
         <thead>
             <tr className="bg-zinc-900">
                 <th className="p-2 font-black">Nome</th>
