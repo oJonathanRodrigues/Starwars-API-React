@@ -1,7 +1,7 @@
 import Area from "../pagina/comum/Area";
 import vantagem1 from "../../../public/foto-3.jpg";
 import Vantagem from "./Personagens";
-import ControlePersonagens from "../gerenciador/ControlePersonagens";
+import ControleVeiculos from "../gerenciador/ControleVeiculos";
 
 export default function Veiculos() {
     return (
@@ -13,7 +13,7 @@ export default function Veiculos() {
                     subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga"
                 />
             </div>
-            <ControlePersonagens/>
+            <ControleVeiculos/>
         </Area>
     )
 }

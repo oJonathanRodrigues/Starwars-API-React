@@ -1,7 +1,7 @@
 import Area from "../pagina/comum/Area";
 import vantagem1 from "../../../public/foto-2.jpg";
 import Vantagem from "./Planetas";
-import ControlePersonagens from "../gerenciador/ControlePersonagens";
+import ControlePlanetas from "../gerenciador/ControlePlanetas";
 
 export default function Planetas() {
     return (
@@ -14,7 +14,7 @@ export default function Planetas() {
                     inverter
                 />
             </div>
-            <ControlePersonagens/>
+            <ControlePlanetas/>
         </Area>
     )
 }

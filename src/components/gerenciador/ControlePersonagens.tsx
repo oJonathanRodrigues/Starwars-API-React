@@ -1,6 +1,6 @@
 import Filmes from "@/components/starwars/Filmes";
 import Personagens from "@/components/starwars/Personagens";
-import useStarwars from "@/data/hooks/getFilmes";
+import useStarwars from "@/data/hooks/getPersonagens";
 
 export default function ControlePersonagens(){
     const {processando, personagens, filmes, voltar,selecionarPersonagem} = useStarwars()
