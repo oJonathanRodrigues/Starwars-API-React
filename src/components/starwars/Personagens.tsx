@@ -10,10 +10,10 @@ export default function Personagens(props: PersonagensProps){
        <table className="w-3/5 text-xl rounded-lg overflow-hidden ">
         <thead>
             <tr className="bg-zinc-900">
-                <th className="p-2 font-black">Nome</th>
-                <th className="p-2 font-black">Altura</th>
-                <th className="p-2 font-black">Peso</th>
-                <th className="p-2 font-black">Ações</th>
+                <th className="p-2 font-black text-white">Nome</th>
+                <th className="p-2 font-black text-white">Altura</th>
+                <th className="p-2 font-black text-white">Peso</th>
+                <th className="p-2 font-black text-white">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@ export default function Personagens(props: PersonagensProps){
                 <tr key={p.name}
                 className={`
                 text-center
-                ${indice % 2 === 0 ? 'bg-zinc-700':'bg-zinc-800'}
+                ${indice % 2 === 0 ? 'bg-zinc-700 text-white':'bg-zinc-800 text-white'}
                 `}>
                     <td className="p-2">{p.name}</td>
                     <td className="p-2">{p.height}</td>

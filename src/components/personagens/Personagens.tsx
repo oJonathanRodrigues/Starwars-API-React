@@ -26,7 +26,7 @@ export default function Personagens(props: PersonagensProps) {
                     flex flex-col text-white
                     font-black text-2xl sm:text-4xl bg-yellow-400
                 `}>{props.titulo}</div>
-                <span className="font-light text-base sm:text-lg text-white-900  ">
+                <span className="font-light text-base sm:text-lg text-zinc-300  ">
                     {props.subtitulo}
                 </span>                
             </div>
