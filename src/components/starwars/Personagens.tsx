@@ -1,4 +1,4 @@
-import { IconCheck } from '@tabler/icons-react'
+import { IconEyeglass2 } from '@tabler/icons-react'
 
 interface PersonagensProps{
     personagens: any[]
@@ -27,10 +27,10 @@ export default function Personagens(props: PersonagensProps){
                     <td className="p-2">{p.height}</td>
                     <td className="p-2">{p.mass}</td>
                     <td className="p-2">
-                        <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-900"
+                        <button className="bg-yellow-400 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600"
                         onClick={() => props.selecionar(p)}
                         >
-                            <IconCheck size={20}/>
+                            <IconEyeglass2 size={20}/>
                         </button>
                     </td>
                 </tr>

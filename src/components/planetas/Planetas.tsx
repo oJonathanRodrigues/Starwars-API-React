@@ -20,7 +20,7 @@ export default function Planetas(props: PlanetasProps) {
             />
             <div className={`
                 flex flex-col gap-y-6 sm:w-[350px]
-                text-center sm:text-left
+                text-center
             `}>
                 <div className={`
                     flex flex-col text-white

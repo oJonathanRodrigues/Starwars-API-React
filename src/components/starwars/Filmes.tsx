@@ -28,7 +28,7 @@ export default function filmes(props: FilmesProps){
             ))}
         </tbody>
        </table>
-       <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-900"
+       <button className="bg-yellow-400 text-white font-bold py-2 px-4 rounded-md hover:bg-yellow-600"
         onClick={props.voltar}
         >Voltar</button>
     </div>
