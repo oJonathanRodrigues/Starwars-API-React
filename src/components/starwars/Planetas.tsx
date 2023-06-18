@@ -11,7 +11,7 @@ export default function Planetas(props: PlanetasProps){
         <thead>
             <tr className="bg-zinc-900">
                 <th className="p-2 font-black text-white">Nome</th>
-                <th className="p-2 font-black text-white">Diâmetro</th>
+                <th className="p-2 font-black text-white">Diâmetro (km)</th>
                 <th className="p-2 font-black text-white">Filmes</th>
             </tr>
         </thead>

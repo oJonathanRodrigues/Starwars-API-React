@@ -10,7 +10,7 @@ export default function Personagens() {
                 <Vantagem
                     imagem={vantagem1}
                     titulo="Personagens"
-                    subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga"
+                    subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga e a informação da altura e peso"
                 />
             </div>
             <ControlePersonagens/>

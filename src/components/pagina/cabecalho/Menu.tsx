@@ -4,9 +4,6 @@ export default function Menu() {
 
     return (
         <div className="flex gap-2 text-2xl">
-            <MenuItem url="#apresentacao" className="hidden sm:flex">
-                Apresentação
-            </MenuItem>
             <MenuItem url="#personagens" className="hidden sm:flex">
                 Personagens
             </MenuItem>

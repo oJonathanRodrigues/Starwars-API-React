@@ -5,8 +5,8 @@ interface FilmesProps{
 
 export default function filmes(props: FilmesProps){
     return(
-     <div className="flex flex-col gap-5 items-center w=full w-screen">
-       <table className="w-3/5 text-xl opacity-70 rounded-lg overflow-hidden">
+     <div className="flex flex-col gap-5 items-center w=full w-screen text-white">
+       <table className="w-3/5 text-xl rounded-lg overflow-hidden">
         <thead>
             <tr className="bg-zinc-900">
                 <th className="p-2 font-black">Título</th>

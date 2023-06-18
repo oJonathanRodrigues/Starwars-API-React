@@ -11,8 +11,8 @@ export default function Personagens(props: PersonagensProps){
         <thead>
             <tr className="bg-zinc-900">
                 <th className="p-2 font-black text-white">Nome</th>
-                <th className="p-2 font-black text-white">Altura</th>
-                <th className="p-2 font-black text-white">Peso</th>
+                <th className="p-2 font-black text-white">Altura (cm)</th>
+                <th className="p-2 font-black text-white">Peso (kg)</th>
                 <th className="p-2 font-black text-white">Ações</th>
             </tr>
         </thead>
