@@ -10,7 +10,7 @@ export default function Naves() {
                 <Vantagem
                     imagem={vantagem1}
                     titulo="Naves"
-                    subtitulo="Aqui você consegue obter os dados das 10 principais naves da saga 🛸"
+                    subtitulo="Aqui você consegue obter os dados das 10 principais naves da saga 🚀"
                     inverter
                 />
             </div>
