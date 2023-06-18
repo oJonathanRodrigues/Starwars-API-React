@@ -10,7 +10,7 @@ export default function Planetas() {
                 <Vantagem
                     imagem={vantagem1}
                     titulo="Planetas"
-                    subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga"
+                    subtitulo="Aqui você consegue obter os dados dos 10 principais planetas da saga 🪐"
                     inverter
                 />
             </div>

@@ -10,7 +10,7 @@ export default function Veiculos() {
                 <Vantagem
                     imagem={vantagem1}
                     titulo="Veículos"
-                    subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga"
+                    subtitulo="Aqui você consegue obter os dados dos 10 principais veículos da saga 🛸"
                 />
             </div>
             <ControleVeiculos/>

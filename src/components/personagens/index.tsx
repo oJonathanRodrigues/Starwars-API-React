@@ -10,7 +10,7 @@ export default function Personagens() {
                 <Vantagem
                     imagem={vantagem1}
                     titulo="Personagens"
-                    subtitulo="Aqui você consegue obter os dados dos 10 principais personagens da saga e a informação da altura e peso"
+                    subtitulo="A tabela a seguir mostra as informações dos personagens de Star Wars, obtidas a partir de uma API. Você pode ver alguns dados relevantes, como nome, altura e peso. Se quiser saber em quais filmes cada personagem apareceu, basta clicar no ícone ao lado do peso dele."
                 />
             </div>
             <ControlePersonagens/>

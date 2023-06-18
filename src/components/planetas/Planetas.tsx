@@ -1,6 +1,7 @@
 import React from "react"
 import ImagemResponsiva from "../pagina/comum/ImagemResponsiva"
 
+
 export interface PlanetasProps {
     imagem: any
     titulo: string
@@ -26,8 +27,9 @@ export default function Planetas(props: PlanetasProps) {
                     flex flex-col text-white
                     font-black text-2xl sm:text-4xl bg-yellow-400
                 `}>{props.titulo}</div>
-                <span className="font-light text-base sm:text-lg text-zinc-300  ">
+                <span className="font-light text-base sm:text-lg text-zinc-300  " >
                     {props.subtitulo}
+                    
                 </span>                
             </div>
         </div>
