@@ -8,7 +8,7 @@ export default function Apresentacao() {
         <Area id="apresentacao" className="pt-20">
             <div className={`
                 flex items-center justify-around
-                h-[500px]
+                h-[400px]
             `}>
                 <Slogan />
                 <ImagemResponsiva
