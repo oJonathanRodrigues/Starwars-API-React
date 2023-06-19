@@ -1,7 +1,7 @@
 import Area from "../pagina/comum/Area";
 import vantagem1 from "../../../public/foto-4.jpg";
 import Vantagem from "./Naves";
-import ControleNaves from "../gerenciador/ControleNaves";
+import ControleNaves from "../../gerenciador/ControleNaves";
 
 export default function Naves() {
     return (

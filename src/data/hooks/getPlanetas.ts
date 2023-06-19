@@ -3,15 +3,15 @@ import useProcessando from "./estadoProcessamento"
 
 export default function useStarwars(){
     const {processando, iniciarProcessamento, finalizarProcessamento} = useProcessando()
-    const [personagens, setPersonagens] = useState<any[]>([])
-    const [personagem, setPersonagem] = useState<any>([])
+    const [planetas, setPlanetas] = useState<any[]>([])
+    const [planetaSelecionado, setPlanetaSelecionado] = useState<any>([])
     const [filmes, setFilmes] = useState<any>([])
 
-    const obterFilmes = useCallback(async function (personagem: any){
-        if(!personagem?.films?.length) return
+    const obterFilmes = useCallback(async function (planetaSelecionado: any){
+        if(!planetaSelecionado?.films?.length) return
         try{
             iniciarProcessamento()
-            const reqs = personagem.films.map(async(film: string) => {
+            const reqs = planetaSelecionado.films.map(async(film: string) => {
                 const resp = await fetch(film)
                 return resp.json()
             })
@@ -24,39 +24,39 @@ export default function useStarwars(){
     },[iniciarProcessamento, finalizarProcessamento])
 
     useEffect(() =>{
-        obterFilmes(personagem)
-    },[personagem, obterFilmes])
+        obterFilmes(planetaSelecionado)
+    },[planetaSelecionado, obterFilmes])
 
-    const obterPersonagens = useCallback(async function (){
+    const obterPlanetas = useCallback(async function (){
         try{
             iniciarProcessamento()
             const resp = await fetch('https://swapi.dev/api/planets/')
             const dados = await resp.json()
-            setPersonagens(dados.results)
+            setPlanetas(dados.results)
         } finally{
             finalizarProcessamento()
         }
     },[iniciarProcessamento, finalizarProcessamento])
 
-    function selecionarPersonagem(personagem: any){
-        setPersonagem(personagem)
+    function selecionarPlaneta(planetaSelecionado: any){
+        setPlanetaSelecionado(planetaSelecionado)
        }
        
        useEffect(() => {
-           obterPersonagens()
-        }, [obterPersonagens])
+           obterPlanetas()
+        }, [obterPlanetas])
         
         function voltar(){
-            setPersonagem(null)
+            setPlanetaSelecionado(null)
             setFilmes([])
         }
     
 
     return{
-        personagens,
+        planetas,
         processando,
         filmes,
         voltar,
-        selecionarPersonagem
+        selecionarPlaneta
     }
 }

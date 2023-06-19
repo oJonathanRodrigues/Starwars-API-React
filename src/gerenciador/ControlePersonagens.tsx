@@ -1,8 +1,8 @@
-import Filmes from "@/components/starwars/Filmes";
-import Naves from "../starwars/Naves";
-import useStarwars from "@/data/hooks/getNaves";
+import Filmes from "@/components/filmes/TabelaFilmes";
+import Personagens from "@/components/personagens/TabelaPersonagens";
+import useStarwars from "@/data/hooks/getPersonagens";
 
-export default function ControleNaves(){
+export default function ControlePersonagens(){
     const {processando, personagens, filmes, voltar,selecionarPersonagem} = useStarwars()
   
     return(
@@ -13,7 +13,7 @@ export default function ControleNaves(){
             ): filmes.length > 0 ?(
                 <Filmes filmes={filmes} voltar={voltar}/>
             ): personagens.length > 0 ?(
-               <Naves personagens={personagens} selecionar={selecionarPersonagem}/>
+               <Personagens personagens={personagens} selecionar={selecionarPersonagem}/>
             ) : (
                 <div>Dados não encontrados</div>
             )}

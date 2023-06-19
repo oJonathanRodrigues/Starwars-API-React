@@ -3,15 +3,15 @@ import useProcessando from "./estadoProcessamento"
 
 export default function useStarwars(){
     const {processando, iniciarProcessamento, finalizarProcessamento} = useProcessando()
-    const [personagens, setPersonagens] = useState<any[]>([])
-    const [personagem, setPersonagem] = useState<any>([])
+    const [naves, setNaves] = useState<any[]>([])
+    const [naveSelecionada, setNaveSelecionada] = useState<any>([])
     const [filmes, setFilmes] = useState<any>([])
 
-    const obterFilmes = useCallback(async function (personagem: any){
-        if(!personagem?.films?.length) return
+    const obterFilmes = useCallback(async function (naveSelecionada: any){
+        if(!naveSelecionada?.films?.length) return
         try{
             iniciarProcessamento()
-            const reqs = personagem.films.map(async(film: string) => {
+            const reqs = naveSelecionada.films.map(async(film: string) => {
                 const resp = await fetch(film)
                 return resp.json()
             })
@@ -24,39 +24,39 @@ export default function useStarwars(){
     },[iniciarProcessamento, finalizarProcessamento])
 
     useEffect(() =>{
-        obterFilmes(personagem)
-    },[personagem, obterFilmes])
+        obterFilmes(naveSelecionada)
+    },[naveSelecionada, obterFilmes])
 
-    const obterPersonagens = useCallback(async function (){
+    const obterNaves = useCallback(async function (){
         try{
             iniciarProcessamento()
             const resp = await fetch('https://swapi.dev/api/starships/')
             const dados = await resp.json()
-            setPersonagens(dados.results)
+            setNaves(dados.results)
         } finally{
             finalizarProcessamento()
         }
     },[iniciarProcessamento, finalizarProcessamento])
 
-    function selecionarPersonagem(personagem: any){
-        setPersonagem(personagem)
+    function selecionarNave(naveSelecionada: any){
+        setNaveSelecionada(naveSelecionada)
        }
        
        useEffect(() => {
-           obterPersonagens()
-        }, [obterPersonagens])
+           obterNaves()
+        }, [obterNaves])
         
         function voltar(){
-            setPersonagem(null)
+            setNaveSelecionada(null)
             setFilmes([])
         }
     
 
     return{
-        personagens,
+        naves,
         processando,
         filmes,
         voltar,
-        selecionarPersonagem
+        selecionarNave
     }
 }

@@ -4,14 +4,14 @@ import useProcessando from "./estadoProcessamento"
 export default function useStarwars(){
     const {processando, iniciarProcessamento, finalizarProcessamento} = useProcessando()
     const [personagens, setPersonagens] = useState<any[]>([])
-    const [personagem, setPersonagem] = useState<any>([])
+    const [personagemSelecionado, setPersonagemSelecionado] = useState<any>([])
     const [filmes, setFilmes] = useState<any>([])
 
-    const obterFilmes = useCallback(async function (personagem: any){
-        if(!personagem?.films?.length) return
+    const obterFilmes = useCallback(async function (personagemSelecionado: any){
+        if(!personagemSelecionado?.films?.length) return
         try{
             iniciarProcessamento()
-            const reqs = personagem.films.map(async(film: string) => {
+            const reqs = personagemSelecionado.films.map(async(film: string) => {
                 const resp = await fetch(film)
                 return resp.json()
             })
@@ -24,8 +24,8 @@ export default function useStarwars(){
     },[iniciarProcessamento, finalizarProcessamento])
 
     useEffect(() =>{
-        obterFilmes(personagem)
-    },[personagem, obterFilmes])
+        obterFilmes(personagemSelecionado)
+    },[personagemSelecionado, obterFilmes])
 
     const obterPersonagens = useCallback(async function (){
         try{
@@ -38,8 +38,8 @@ export default function useStarwars(){
         }
     },[iniciarProcessamento, finalizarProcessamento])
 
-    function selecionarPersonagem(personagem: any){
-        setPersonagem(personagem)
+    function selecionarPersonagem(personagemSelecionado: any){
+        setPersonagemSelecionado(personagemSelecionado)
        }
        
        useEffect(() => {
@@ -47,7 +47,7 @@ export default function useStarwars(){
         }, [obterPersonagens])
         
         function voltar(){
-            setPersonagem(null)
+            setPersonagemSelecionado(null)
             setFilmes([])
         }
     

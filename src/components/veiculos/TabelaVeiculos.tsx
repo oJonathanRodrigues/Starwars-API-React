@@ -1,8 +1,8 @@
 import { IconEyeglass2 } from '@tabler/icons-react'
 
 interface PlanetasProps{
-    personagens: any[]
-    selecionar: (personagem: any) => void
+    veiculos: any[]
+    selecionar: (item: any) => void
 }
 
 export default function Veiculos(props: PlanetasProps){
@@ -16,7 +16,7 @@ export default function Veiculos(props: PlanetasProps){
             </tr>
         </thead>
         <tbody>
-            {props.personagens.map((p: any, indice: number) =>(
+            {props.veiculos.map((p: any, indice: number) =>(
                 <tr key={p.name}
                 className={`
                 text-center

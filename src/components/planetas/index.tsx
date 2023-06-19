@@ -1,7 +1,7 @@
 import Area from "../pagina/comum/Area";
 import vantagem1 from "../../../public/foto-2.jpg";
 import Vantagem from "./Planetas";
-import ControlePlanetas from "../gerenciador/ControlePlanetas";
+import ControlePlanetas from "../../gerenciador/ControlePlanetas";
 
 export default function Planetas() {
     return (

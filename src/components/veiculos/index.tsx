@@ -1,7 +1,7 @@
 import Area from "../pagina/comum/Area";
 import vantagem1 from "../../../public/foto-3.jpg";
-import Vantagem from "./Personagens";
-import ControleVeiculos from "../gerenciador/ControleVeiculos";
+import Vantagem from "./Veiculos";
+import ControleVeiculos from "../../gerenciador/ControleVeiculos";
 
 export default function Veiculos() {
     return (
