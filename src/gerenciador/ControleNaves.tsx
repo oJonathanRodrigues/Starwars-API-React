@@ -6,7 +6,7 @@ export default function ControleNaves(){
     const {processando, naves, filmes, voltar,selecionarNave} = useStarwars()
   
     return(
-        <div className="flex flex-col gap-5 justify-center items-center h-screen relative">
+        <div className="flex flex-col gap-5 justify-center items-center h-screen relative text-white">
 
              {processando ? (
                 <div>Processando......</div>

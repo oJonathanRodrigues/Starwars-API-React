@@ -6,7 +6,7 @@ export default function ControlePersonagens(){
     const {processando, personagens, filmes, voltar,selecionarPersonagem} = useStarwars()
   
     return(
-        <div className="flex flex-col gap-10 justify-center items-center h-screen relative">
+        <div className="flex flex-col gap-10 justify-center items-center h-screen relative text-white">
 
              {processando ? (
                 <div>Processando......</div>
