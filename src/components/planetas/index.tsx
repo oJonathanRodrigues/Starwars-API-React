@@ -1,5 +1,5 @@
 import Area from "../pagina/comum/Area";
-import vantagem1 from "../../../public/foto-2.jpg";
+import fotoPlaneta from "../../../public/foto-2.jpg";
 import Vantagem from "./Planetas";
 import ControlePlanetas from "../../gerenciador/ControlePlanetas";
 
@@ -8,7 +8,7 @@ export default function Planetas() {
         <Area id="planetas" className="bg-black py-16 sm:py-36">
             <div className="flex flex-col items-center gap-y-16 sm:gap-y-36">
                 <Vantagem
-                    imagem={vantagem1}
+                    imagem={fotoPlaneta}
                     titulo="Planetas"
                     subtitulo="Aqui você consegue obter os dados dos 10 principais planetas da saga 🪐"
                     inverter

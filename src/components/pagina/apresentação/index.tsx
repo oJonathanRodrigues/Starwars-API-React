@@ -1,6 +1,6 @@
 import Area from "../comum/Area";
 import Slogan from "./Slogan";
-import principal from "../../../../public/principal.jpg"
+import principal from "../../../../public/principal.jpg";
 import ImagemResponsiva from "../comum/ImagemResponsiva";
 
 export default function Apresentacao() {
