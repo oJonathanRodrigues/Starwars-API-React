@@ -1,4 +1,4 @@
-import { IconEyeglass2 } from '@tabler/icons-react'
+import { IconEyeglass2 } from '@tabler/icons-react';
 
 interface PlanetasProps{
     veiculos: any[]
